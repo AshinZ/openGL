@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{134F7009-67BF-4167-AC7C-46A4362BCB10}</ProjectGuid>
+    <ProjectGuid>{958D6B6C-9903-4D29-B0E2-F0DFF8C12090}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>openGLTest</RootNamespace>
+    <RootNamespace>openGlTest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -72,6 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\nuaacs\openGL\glfwEnvironment\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\nuaacs\openGL\glfwEnvironmeng\bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -94,6 +96,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -147,21 +150,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="openGLTest.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <ClCompile Include="openGlTest.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets" Condition="Exists('..\packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets')" />
-    <Import Project="..\packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets" Condition="Exists('..\packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets')" />
   </ImportGroup>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets'))" />
-    <Error Condition="!Exists('..\packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets'))" />
-  </Target>
 </Project>
