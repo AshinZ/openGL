@@ -10,6 +10,7 @@
 
 #include <stdlib.h>
 #include <gl\glut.h>
+#include <stdio.h>
 const GLdouble FRUSTDIM = 100.0f;
 
 int option = 0, i = 0;
@@ -46,6 +47,7 @@ void init(void) // All Setup For OpenGL Goes Here
 
 void display(void) // Here's Where We Do All The Drawing
 {
+	printf("111\n");
 	/* Clear the buffer */
 	glClearColor(0.0, 0.0, 0.0, 1);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);

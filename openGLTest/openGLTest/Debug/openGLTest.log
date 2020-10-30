@@ -1,3 +1,3 @@
-﻿  openGlTest.cpp
-E:\nuaacs\openGL\openGlTest\openGlTest\openGlTest.cpp(595,1): warning C4326: “main”的返回类型应为“int”而非“void”
+﻿  submit.cpp
+E:\nuaacs\openGL\openGlTest\openGlTest\submit.cpp(732,1): warning C4326: “main”的返回类型应为“int”而非“void”
   openGlTest.vcxproj -> E:\nuaacs\openGL\openGlTest\Debug\openGlTest.exe
